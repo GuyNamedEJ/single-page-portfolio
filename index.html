@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Single-page design portfolio</title>
+</head>
+
+<body>
+  <header class="container">
+    <img src="assets/logo.svg" alt="logo" class="logo">
+    <button class="btn btn-primary">Free Consultation</button>
+  </header>
+
+  <section class="intro container">
+    <h1 class="heading-md text-weight-bold"> Design solutions made easy</h1>
+    <p class="para-text text-weight-md">With over ten years of experience in various design disciplines, I’m your
+      one-stop shop for your design needs.
+    </p>
+  </section>
+
+  <section class="skills container">
+    <div class="tile graphic-design">
+      <img src="/assets/pattern-graphic-design.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">Graphic Design</h2>
+    </div>
+
+    <div class="tile ui">
+      <img src="/assets/pattern-ui-ux.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">UI/UX</h2>
+    </div>
+
+    <div class="tile apps">
+      <img src="/assets/pattern-apps.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">Apps</h2>
+    </div>
+
+    <div class="tile illustrations">
+      <img src="/assets/pattern-illustrations.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">Illustrations</h2>
+    </div>
+
+    <div class="tile photography">
+      <img src="/assets/pattern-photography.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">Photography</h2>
+    </div>
+
+    <div class="tile motion">
+      <img src="/assets/pattern-motion-graphics.svg" alt="">
+      <h2 class="skills-label text-weight-bold text-white">Motion Graphics</h2>
+    </div>
+  </section>
+
+
+  <section class="about container">
+    <img src="assets/image-amy.webp" alt="Amy Portrait">
+    <h2 class="heading-sm text-weight-bold text-center"> I’m Amy, and I’d love to work on your next project</h2>
+    <p class="para-text text-center">I love working with others to create beautiful design solutions. I’ve designed
+      everything from brand illustrations to complete mobile apps. I’m also handy with a camera!</p>
+    <button class="btn btn-secondary">Free Consultation</button>
+  </section>
+
+
+  <section class="work">
+    <h1 class="text-center heading-md text-weight-bold">My Work</h1>
+    <div class="my-slider">
+      <img class="slider-img" src="/assets/image-slide-1.jpg" alt="">
+      <img class="slider-img" src="/assets/image-slide-2.jpg" alt="">
+      <img class="slider-img" src="/assets/image-slide-3.jpg" alt="">
+      <img class="slider-img" src="/assets/image-slide-4.jpg" alt="">
+      <img class="slider-img" src="/assets/image-slide-5.jpg" alt="">
+    </div>
+
+    <div class="slider-controls">
+      <div data-controls="prev" class="slider-control-btn"><img src="/assets/icon-arrow-left.svg" alt=""></div>
+      <div data-controls="next"class="slider-control-btn"><img src="/assets/icon-arrow-right.svg" alt=""></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="footer">
+      <h2 class="heading-sm text-center text-weight-bold text-white">Book a call with me</h2>
+      <p class="para-text text-white text-center">I’d love to have a chat to see how I can help you. The best first step
+        is for us to discuss your project during a
+        free consultation. Then we can move forward from there.</p>
+      <button class="btn btn-secondary">Free Consultation</button>
+    </div>
+    <div class="footer-nav">
+      <img class="logo" src="/assets/logo.svg" alt="">
+      <button class="btn btn-primary">Free Consultation</button>
+    </div>
+  </section>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+
+var slider = tns({
+  container: '.my-slider',
+  "items": 3,
+  "responsive": {
+    "320": {
+      "items": 1
+    },
+    "768": {
+      "items": 1
+    },
+    "1440": {
+      "items": 3
+    }
+  },
+  "gutter": 15,
+  "loop":true,
+  "edgePadding": 25,
+  "swipeAngle": false,
+  "speed": 400,
+  "controlsContainer":'.slider-controls',
+});
+  </script>
+</body>
+
+</html>
