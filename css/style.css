@@ -162,13 +162,19 @@ select {
 }
 
 .btn-primary{
-    color:white;
     background-color: var(--color-black);
-    font-size: var(--fs-text-p);
-    border-radius: var(--btn-border-radius);
-    width:var(--btn-width);
-    height:var(--btn-height);
-    border:none;
+}
+
+.btn-primary:hover{
+    background-color: var(--color-galactic-blue)  ;
+}
+
+.btn-secondary{
+    background-color: var(--color-light-red);
+}
+
+.btn-secondary:hover{
+    background-color: var(--color-summer-yellow);
 }
 
 .btn{
@@ -180,9 +186,7 @@ select {
     border:none;
 }
 
-.btn-secondary{
-    background-color: var(--color-light-red);
-}
+
 
 .slider-controls{
     display:flex;
@@ -214,6 +218,8 @@ select {
 body{
     background-color: var(--color-light-cream);
     font-family: var(--font-family);
+    max-width: 1440px;
+    margin: auto;
 
 }
 
@@ -252,24 +258,6 @@ header{
     'motion motion';
     margin-bottom: 120px;
 }
-
-@media screen and (min-width:768px) {
-    
-    .skills{
-        grid-template-areas: 
-        'graphic graphic ui app'
-        'graphic graphic illustrations illustrations'
-        'photography photography motion motion';
-    }
-}
-
-@media screen and (min-width:1440px) {
-    .skills{
-        grid-template-areas: 
-        'graphic graphic ui app photography photography'
-        'graphic graphic illustrations illustrations motion motion';
-    }
-} 
 
 .tile{
     display:flex;
@@ -334,6 +322,10 @@ header{
     margin-bottom: 100px;
 }
 
+.about-content{
+    text-align: center;
+}
+
 .about>img{
     width:300px;
     margin-bottom: 40px;
@@ -364,6 +356,7 @@ div[aria-label="Carousel Pagination"] {
     padding:24px;
     margin-bottom: 40px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .footer-nav{
@@ -373,3 +366,58 @@ div[aria-label="Carousel Pagination"] {
     margin-bottom: 32px;
 }
 
+@media screen and (min-width:768px) {
+    
+    .container{
+        padding-inline: 39px;
+    }
+    .heading-md{
+        font-size: 44px;
+    }
+
+    .para-text{
+        font-size: 16px;
+    }
+
+    .skills{
+        grid-template-areas: 
+        'graphic graphic ui app'
+        'graphic graphic illustrations illustrations'
+        'photography photography motion motion';
+    }
+
+    
+
+}
+
+@media screen and (min-width:1440px) {
+    .skills{
+        grid-template-areas: 
+        'graphic graphic ui app photography photography'
+        'graphic graphic illustrations illustrations motion motion';
+    }
+
+    .about{
+        flex-direction: row;
+        gap:69px;
+    }
+
+    .about-content{
+        text-align: left;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-content{
+        text-align: left;
+        width: 540px;
+    }
+
+    .container{
+        padding-inline:165px;
+    }
+} 
